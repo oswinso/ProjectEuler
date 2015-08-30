@@ -1,0 +1,32 @@
+package problem4;
+
+public class LargestPalindromProduct {
+	public static void main(String[] args) {
+		int largest = 0;
+		for(int x = 100; x<1000; x++) {
+			for(int y = 100; y<1000; y++) {
+				if(isPalindrome(x*y) && x*y>largest) {
+					largest = x*y;
+					System.out.println(x+" * "+y);
+				}
+			}
+		}
+		System.out.println(largest);
+	}
+	
+	public static boolean isPalindrome(int x){
+		if(x==reverse(x)) {
+			return true;
+		}
+		return false;
+	}
+	
+	public static int reverse(int x) {
+		int reverse = 0;
+		while(x != 0) {
+			reverse = reverse*10 + x%10;
+			x = x/10;
+		}
+		return reverse;
+	}
+}

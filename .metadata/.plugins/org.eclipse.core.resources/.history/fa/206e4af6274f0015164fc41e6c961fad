@@ -1,0 +1,25 @@
+package problem5;
+
+public class SmallestMultiple {
+	public static void main(String args[]) {
+		int num = 20;
+		int[] factors = new int[num];
+		int[] tempFactors = new int[num];
+
+		int tempFactor = 2;
+		//Get number of factors needed
+		for(int i = 20; i > 1; i--) {
+			num = i;
+			
+			while(num>1) {
+				if(num%tempFactor == 0) {
+					tempFactors[tempFactor]++;
+					num/tempFactor;
+				}
+				else {
+					tempFactor++;
+				}
+			}
+		}
+	}
+}

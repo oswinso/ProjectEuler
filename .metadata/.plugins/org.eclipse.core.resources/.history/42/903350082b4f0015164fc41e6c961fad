@@ -1,0 +1,23 @@
+package problem5;
+
+public class SmallestMultiple {
+	public static void main(String args[]) {
+		int num = 20;
+		int lcmLast = 1;
+		for(int i = 2; i<num+1; i++) {
+			lcmLast = lcmLast*i/gcd(lcmLast,i);
+			System.out.println(lcmLast);
+		}
+		System.out.println(lcmLast);
+	}
+	
+	public static int gcd(int num1, int num2) {
+		int remainder = 0;
+		while(num1%num2!=0) {
+			remainder = num1%num2;
+			num1=num2;
+			num2=remainder;
+		}
+		return num2;
+	}
+}

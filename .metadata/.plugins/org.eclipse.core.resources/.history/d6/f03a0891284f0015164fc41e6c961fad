@@ -1,0 +1,36 @@
+package problem5;
+
+public class SmallestMultiple {
+	public static void main(String args[]) {
+		int num = 20;
+		int[] factors = new int[num];
+		
+		int times = 0;
+		int sum = 0;
+
+		int tempFactor;
+		//Get number of factors needed
+		for(int i = 20; i > 1; i--) {
+			num = i;
+			tempFactor = 2;
+			while(num>1) {
+				if(num%tempFactor == 0) {
+					times++;
+					num = num/tempFactor;
+				}
+				else {
+					if(factors[tempFactor]<times) {
+						factors[tempFactor] = times;
+					}
+					times = 0;
+					tempFactor++;
+				}
+			}
+		}
+		
+		//Multiply the factors needed to get the smallest multiple
+		for(int i = 0; i<20; i++) {
+			sum+=ifactors[i]
+		}
+	}
+}

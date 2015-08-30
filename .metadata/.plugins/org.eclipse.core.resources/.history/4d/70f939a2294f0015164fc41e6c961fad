@@ -1,0 +1,11 @@
+package problem5;
+
+public class SmallestMultiple {
+	public static void main(String args[]) {
+		int num = 20;
+		int lcmLast = 0;
+		for(int i = 1; i<21; i++) {
+			
+		}
+	}
+}
